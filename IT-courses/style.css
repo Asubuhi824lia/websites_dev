@@ -4,5 +4,14 @@
 
 .menu-item-active {
     border-bottom: 3px solid #A8248A;
-    transition: border-width 0.6s linear;
+    transition: border-width 0s linear;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(240, 240, 240);
+    background: linear-gradient(180deg, lightgrey, black);
 }
