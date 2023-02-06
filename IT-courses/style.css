@@ -12,7 +12,8 @@
     min-width: 100px;
 }
 
-.nav-link:hover {
+.nav-item:hover {
     color: rgb(240, 240, 240);
     background: linear-gradient(180deg, lightgrey, black);
 }
+ 
