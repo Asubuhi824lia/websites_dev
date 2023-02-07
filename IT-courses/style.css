@@ -1,19 +1,37 @@
-:root {
-    --bs-gradient: linear-gradient(180deg, transparent, rgba(0, 0, 0, 100));
-}
-
 .menu-item-active {
     border-bottom: 3px solid #A8248A;
     transition: border-width 0s linear;
 }
 
+.nav-item {
+    min-width: 100px;
+}
+
 .nav-link {
     color: white !important;
-    min-width: 100px;
+    width: 100%;
 }
 
 .nav-item:hover {
     color: rgb(240, 240, 240);
     background: linear-gradient(180deg, lightgrey, black);
 }
- 
+
+
+.nav-bg {
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 100));;
+}
+
+
+/* while usual menu */
+@media (min-width: 992px) {
+    .nav-bg {
+        background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 100));
+    }
+}
+/* while burger-menu */
+@media (max-width: 992px) {
+    .nav-bg {
+        background: linear-gradient(180deg, violet, rgba(0, 0, 0, 100));
+    }
+}
