@@ -45,6 +45,6 @@
 /* while burger-menu */
 @media (max-width: 992px) {
     .nav-bg {
-        background: linear-gradient(180deg, violet, rgba(0, 0, 0, 1));
+        background: linear-gradient(180deg, rgb(238, 130, 238, 0.4), rgba(0, 0, 0, 1));
     }
 }
