@@ -1,3 +1,7 @@
+:root {
+    --site-width: 1000px;
+}
+
 .menu-item-active {
     border-bottom: 3px solid #A8248A;
     transition: border-width 0s linear;
@@ -33,6 +37,19 @@
     background-clip: border-box;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.base-info-wrapper
+
+.base-info-content {
+    width: var(--site-width);
+}
+
+.intro-panel {
+    color: #44298C;
+    background: #E6E3EA;
+    border: 1px solid #C7C4CE;
+    font-weight: bold;
 }
 
 
