@@ -42,7 +42,7 @@
 .base-info-wrapper
 
 .base-info-content {
-    width: var(--site-width);
+    width: calc(var(--site-width) + 60px);
 }
 
 .intro-panel {
