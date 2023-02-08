@@ -2,6 +2,18 @@
     --site-width: 1000px;
 }
 
+a:hover {
+    text-decoration: underline !important;
+}
+
+body {
+    background-color: #D9D9D9;
+}
+
+footer {
+    background-color: #FFFFFF;
+}
+
 .menu-item-active {
     border-bottom: 3px solid #A8248A;
     transition: border-width 0s linear;
@@ -37,12 +49,6 @@
     background-clip: border-box;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.base-info-wrapper
-
-.base-info-content {
-    width: calc(var(--site-width) + 60px);
 }
 
 .intro-panel {

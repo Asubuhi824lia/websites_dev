@@ -17,9 +17,9 @@
         </div>
 
         <div class="d-flex justify-content-center">   
-            <nav class="navbar navbar-expand-lg 
+            <nav class="navbar navbar-expand-lg
                         d-flex justify-content-center"  
-                 style="width: var(--site-width); --bs-navbar-toggler-focus-width: 0;" 
+                 style="--bs-navbar-toggler-focus-width: 0;" 
                  role="navigation">
                 <button class="navbar-toggler bg-dark-subtle rounded-bottom-0 border-bottom-0" 
                         type="button" 
@@ -48,9 +48,6 @@
                             <a class="nav-link" href="#">Нето<br>логия</a>
                         </li>
                         <li class="nav-item d-flex align-items-center fw-bold">
-                            <a class="nav-link" href="#">Fin<br>Tech</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center fw-bold">
                             <a class="nav-link" href="#">Analytika<br>Plus</a>
                         </li>
                         <li class="nav-item d-flex align-items-center fw-bold" >
@@ -72,7 +69,8 @@
     </header>
 
     <div class="base-info-wrapper d-flex justify-content-center mt-3 mb-4">
-        <div class="base-info-content d-flex flex-column" >
+        <div class="base-info-content d-flex flex-column"
+             style="width: calc(var(--site-width) + 60px); ">
             <div class="intro-panel p-3 mb-4">
                 <p>Что бы стать хорошим аналитиком данных, особенно в сфере big data, нужно разбираться как в программировании, так и в статистике, и иметь представление о технологиях обработки больших массивов информации.</p>
                 <p>Освоить профессию и изучить все тонкости помогут онлайн-курсы. Вас научат навыкам программирования на популярных языках, строить скоринговые модели, модели прогнозирования цен и спроса, работать с базами данных, методам машинного обучения.</p>
@@ -81,7 +79,95 @@
             <div class="info-panel">Brief info about courses</div>
         </div>
     </div>
-    footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+    
+    <footer class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" 
+        style="width: calc(var(--site-width) + 60px);">
+            <table class="table table-hover text-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Платформа</th>
+                        <th scope="col">Курс</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">Skillbox</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://skillbox.ru/course/profession-data-analyst/" class="text-decoration-none text-dark">
+                                Профессия Data Analyst
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">GeekBrains</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://gb.ru/geek_university/developer/analyst" class="text-decoration-none text-dark">
+                                Инженер-аналитик
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">SkillFactory</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://skillfactory.ru/data-analytics" class="text-decoration-none text-dark">
+                                Полный курс по анализу данных
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">Нетология</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://netology.ru/programs/data-analyst" class="text-decoration-none text-dark">
+                                Аналитик данных
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">Analytika Plus</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://analytikaplus.ru/video-kurs-analitika-sdelaj-sam/" class="text-decoration-none text-dark">
+                                Аналитика? Сделай сам!
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">Stormnet</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://www.it-courses.by/courses/ba-biznes-analiz/" class="text-decoration-none text-dark">
+                                Бизнес-анализ в сфере разработки ПО
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">Wadline</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://wadline.ru/kurs-po-analitike-dannyh" class="text-decoration-none text-dark">
+                                КУРС ПО АНАЛИТИКЕ ДАННЫХ
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">BrainSkills</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://brainskills.ru/courses/data_scientist/" class="text-decoration-none text-dark">
+                                Анализ данных на Python
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-bottom-0 col-md-6">Центр компьютерного обучения «Специалист» при МГТУ им. Н.Э. Баумана</td>
+                        <td class="border-bottom-0 col-md-6">
+                            <a href="https://www.specialist.ru/profession/analyst" class="text-decoration-none text-dark">
+                                Аналитик: подготовка по специальности
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+    </footer>
+    
     <script src="index.js"></script>
 </body>
 </html>
