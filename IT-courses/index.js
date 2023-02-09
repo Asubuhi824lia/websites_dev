@@ -15,4 +15,8 @@ function changeActive(e) {
     } else {
         e.target.parentNode.classList.add("menu-item-active")
     }
-}
+} 
+
+$("#learnCourseBtn").css("height", function() {
+    return $("#name").css("height");
+});
