@@ -70,14 +70,41 @@
 
     <div class="base-info-wrapper d-flex justify-content-center mt-3 mb-4">
         <div class="base-info-content d-flex flex-column"
-             style="width: calc(var(--site-width) + 60px); ">
+             style="width: calc(var(--site-width) + 60px);">
             <div class="intro-panel p-3 mb-4">
                 <p>Что бы стать хорошим аналитиком данных, особенно в сфере big data, нужно разбираться как в программировании, так и в статистике, и иметь представление о технологиях обработки больших массивов информации.</p>
                 <p>Освоить профессию и изучить все тонкости помогут онлайн-курсы. Вас научат навыкам программирования на популярных языках, строить скоринговые модели, модели прогнозирования цен и спроса, работать с базами данных, методам машинного обучения.</p>
                 <p class="mb-0">Мы собрали для вас полный список онлайн курсов по аналитике данных, которые вы можете пройти, не имея специального образования или дополнительных навыков.</p>
             </div>
-            <div class="info-panel">Brief info about courses</div>
         </div>
+    </div>
+
+    <div class="d-flex justify-content-center bg-white">
+        <div class="info-panel p-3"
+             style="width: calc(var(--site-width) + 60px);">Brief info about courses</div>
+    </div>
+
+    <div class="d-flex justify-content-center my-5">
+        <form   class="d-flex flex-column bg-white py-4 px-5"
+                style="width: 600px;" action="">
+                <h3 class="text-center text-uppercase fs-3 fw-bolder mb-4" style="color: #44298C;">Узнать о курсе подробнее?</h3>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="NAME">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="surname" placeholder="SURNAME">
+                </div>
+                <select class="form-select text-uppercase" aria-label="Disabled select example">
+                    <option selected>Выберите курс</option>
+                    <option value="Skillbox">Профессия Data Analyst</option>
+                    <option value="GeekBrains">Инженер-аналитик</option>
+                    <option value="SkillFactory">Полный курс по анализу данных</option>
+                </select>
+                
+                <div class="col-auto d-flex justify-content-center mt-3">
+                    <button type="submit" class="btn btn-primary mb-3 text-uppercase h-100">Узнать</button>
+                </div>
+        </form>
     </div>
     
     <footer class="d-flex justify-content-center">
