@@ -20,3 +20,5 @@ function changeActive(e) {
 $("#learnCourseBtn").css("height", function() {
     return $("#name").css("height");
 });
+
+console.log(coursesInfo.courses)

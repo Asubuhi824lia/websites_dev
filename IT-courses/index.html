@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
-<body>
+<body tabindex="4">
     <header class="d-flex flex-column align-items-center bg-img">
         <div class="my-5 text-white fw-lighter text-center ">
             <h1>10 лучших онлайн курсов по аналитике данных</h1>
@@ -46,7 +46,7 @@
                             <a class="nav-link" href="#">Skill<br>Factory</a>
                         </li>
                         <li class="nav-item d-flex align-items-center fw-bold">
-                            <a class="nav-link" href="#">Нето<br>логия</a>
+                            <a class="nav-link" href="#">Neto<br>logy</a>
                         </li>
                         <li class="nav-item d-flex align-items-center fw-bold">
                             <a class="nav-link" href="#">Analytika<br>Plus</a>
@@ -55,13 +55,7 @@
                             <a class="nav-link" href="#">Storm<br>net</a>
                         </li>
                         <li class="nav-item d-flex align-items-center fw-bold">
-                            <a class="nav-link" href="#">Wad<br>line</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center fw-bold">
                             <a class="nav-link" href="#">Brain<br>Skills</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center fw-bold">
-                            <a class="nav-link" href="#">+ Бонус</a>
                         </li>
                     </ul>
                 </div>
@@ -90,20 +84,20 @@
                 style="width: 600px;" action="">
                 <labek class="text-center fs-3 fw-bolder mb-4" style="color: #44298C;">Узнать о курсе подробнее?</labek>
                 <div class="mb-3">
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="name" placeholder="NAME">
+                    <input type="text" class="form-control rounded-3 shadow-sm" id="name" placeholder="NAME" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="surname" placeholder="SURNAME">
+                    <input type="text" class="form-control rounded-3 shadow-sm" id="surname" placeholder="SURNAME" required>
                 </div> 
-                <select class="form-select rounded-3 shadow-sm" id="course" aria-label="Disabled select example">
-                    <option class="text-body-tertiary" selected disabled>Выберите курс</option>
-                    <option value="Skillbox">Профессия Data Analyst</option>
+                <select class="form-select rounded-3 shadow-sm" id="course" aria-label="Disabled select example" required>
+                    <option label="Выберите курс"></option>
+                    <option value="Профессия Data Analyst">Профессия Data Analyst</option>
                     <option value="GeekBrains">Инженер-аналитик</option>
                     <option value="SkillFactory">Полный курс по анализу данных</option>
                 </select>
                 
                 <div class="form-btn col-auto d-flex justify-content-center mt-3 mb-3">
-                    <button type="submit" id="learnCourseBtn" class="btn btn-primary rounded-4">Узнать</button>
+                    <input  type="submit" id="learnCourseBtn" class="btn btn-primary rounded-4" value="Узнать">
                 </div>
         </form>
     </div>
@@ -122,8 +116,8 @@
                     <tr>
                         <td class="border-bottom-0 col-md-6">Skillbox</td>
                         <td class="border-bottom-0 col-md-6" id="Skillbox">
-                            <a href="https://skillbox.ru/course/profession-data-analyst/" class="text-decoration-none text-dark">
-                                Профессия Data Analyst
+                            <a href="https://skillbox.ru/course/profession-data-scientist/" class="text-decoration-none text-dark">
+                                Профессия Data Scientist
                             </a>
                         </td>
                     </tr>
@@ -144,7 +138,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="border-bottom-0 col-md-6">Нетология</td>
+                        <td class="border-bottom-0 col-md-6">Netology</td>
                         <td class="border-bottom-0 col-md-6" id="Нетология">
                             <a href="https://netology.ru/programs/data-analyst" class="text-decoration-none text-dark">
                                 Аналитик данных
@@ -168,26 +162,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="border-bottom-0 col-md-6">Wadline</td>
-                        <td class="border-bottom-0 col-md-6" id="Wadline">
-                            <a href="https://wadline.ru/kurs-po-analitike-dannyh" class="text-decoration-none text-dark">
-                                КУРС ПО АНАЛИТИКЕ ДАННЫХ
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
                         <td class="border-bottom-0 col-md-6">BrainSkills</td>
                         <td class="border-bottom-0 col-md-6" id="BrainSkills">
                             <a href="https://brainskills.ru/courses/data_scientist/" class="text-decoration-none text-dark">
                                 Анализ данных на Python
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="border-bottom-0 col-md-6">Центр компьютерного обучения «Специалист» при МГТУ им. Н.Э. Баумана</td>
-                        <td class="border-bottom-0 col-md-6" id="Центр">
-                            <a href="https://www.specialist.ru/profession/analyst" class="text-decoration-none text-dark">
-                                Аналитик: подготовка по специальности
                             </a>
                         </td>
                     </tr>
@@ -198,6 +176,8 @@
 
     <div class="under-footer w-100 py-2 text-center fw-semibold" style="color: #44298C;">Copyright © 2023</div>
 
+    
+    <script src="courses.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

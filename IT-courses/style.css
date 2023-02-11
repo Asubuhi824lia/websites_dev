@@ -1,5 +1,5 @@
 :root {
-    --site-width: 1000px;
+    --site-width: calc(120px * 7);
 }
 
 a:hover {
@@ -33,7 +33,7 @@ footer {
 }
 
 .nav-item {
-    min-width: 100px;
+    min-width: 120px;
 }
 
 .nav-link {
