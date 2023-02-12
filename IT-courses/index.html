@@ -89,11 +89,8 @@
                 <div class="mb-3">
                     <input type="text" class="form-control rounded-3 shadow-sm" id="surname" placeholder="SURNAME" required>
                 </div> 
-                <select class="form-select rounded-3 shadow-sm" id="course" aria-label="Disabled select example" required>
-                    <option label="Выберите курс"></option>
-                    <option value="Профессия Data Analyst">Профессия Data Analyst</option>
-                    <option value="GeekBrains">Инженер-аналитик</option>
-                    <option value="SkillFactory">Полный курс по анализу данных</option>
+                <select class="form-select rounded-3 shadow-sm" id="selectCourse" aria-label="Disabled select example" required>
+                    <option label="Выберите курс" value="" selected disabled></option>
                 </select>
                 
                 <div class="form-btn col-auto d-flex justify-content-center mt-3 mb-3">
@@ -178,6 +175,7 @@
 
     
     <script src="courses.js"></script>
+    <script src="postCoursesInfo.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
