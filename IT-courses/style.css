@@ -71,7 +71,7 @@ footer {
     width: calc(100% / 3);;
 }
 
-input#name, input#surname, select#course {
+input#name, input#surname, select#selectCourse {
     background-color: #F1F1F1;
     border: none !important;
     padding: 10px 20px;
