@@ -21,3 +21,4 @@ $("#learnCourseBtn").css("height", function() {
     return $("#name").css("height");
 });
 
+console.log($("#name, #surname, #selectCourse"))

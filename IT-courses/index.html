@@ -80,14 +80,18 @@
     </div>
 
     <div class="d-flex justify-content-center my-5">
-        <form   class="d-flex flex-column bg-white py-4 px-5 text-uppercase"
+        <form   class="was-validated d-flex flex-column bg-white py-4 px-5 text-uppercase"
                 style="width: 600px;" action="">
-                <labek class="text-center fs-3 fw-bolder mb-4" style="color: #44298C;">Узнать о курсе подробнее?</labek>
+                <label class="text-center fs-3 fw-bolder mb-4" style="color: #44298C;">Узнать о курсе подробнее?</label>
                 <div class="mb-3">
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="name" placeholder="NAME" required>
+                    <input type="text" class="form-control rounded-3 shadow-sm" id="name" placeholder="ИМЯ" required
+                    >
+                    <div class="invalid-feedback text-capitalize">
+                        Пожалуйста укажите имя
+                    </div>
                 </div>
                 <div class="mb-3">
-                    <input type="text" class="form-control rounded-3 shadow-sm" id="surname" placeholder="SURNAME" required>
+                    <input type="text" class="form-control rounded-3 shadow-sm" id="surname" placeholder="ФАМИЛИЯ" required>
                 </div> 
                 <select class="form-select rounded-3 shadow-sm" id="selectCourse" aria-label="Disabled select example" required>
                     <option label="Выберите курс" value="" selected disabled></option>

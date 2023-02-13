@@ -1,13 +1,14 @@
  $(document).ready(function() {
-    // Заполнить select вариантами курсов
-    let options
-
+    
+    
     let info = coursesInfo.courses
     let courses = Array()
 
     for(let course in info) {
         courses[courses.length] = info[course]
     }
+
+    // Заполнить select вариантами курсов
 
     courses.forEach(element => {
         let option = $("<option></option>")[0]
@@ -18,7 +19,7 @@
     });
 
     // Заполнить подвал через <template> 
-
+    
     courses.forEach(element => {
         let rowElem = elementForHtml(`
             <tr>
