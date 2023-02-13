@@ -21,4 +21,18 @@ $("#learnCourseBtn").css("height", function() {
     return $("#name").css("height");
 });
 
-console.log($("#name, #surname, #selectCourse"))
+console.log($("#name, #surname"))
+
+$("#name, #surname").on('keypress', function() {
+    var that = this;
+
+    setTimeout(function() {
+        var res = /[^а-яА-Я]/g.exec(that.value);
+        console.log(res);
+
+        if(res != null) {
+            alert("Используйте только кириллицу!")
+            that.value = that.value.replace(res, '');
+        }
+    }, 0);
+})
