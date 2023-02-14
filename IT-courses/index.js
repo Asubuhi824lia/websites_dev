@@ -1,3 +1,4 @@
+// Main Menu
 let header_menu = document.getElementById("header-menu");
 let menu_items = document.getElementsByClassName("nav-item");
 
@@ -17,29 +18,36 @@ function changeActive(e) {
     }
 } 
 
+
+// Form
 $("#learnCourseBtn").css("height", function() {
     return $("#name").css("height");
-});
-
-console.log($("#name, #surname"))
-
-
-$("#name, #surname").on('input', function() {
-    const that = this;
-
-    setTimeout(function() {
-        const res = /[^а-яА-Я]/g.exec(that.value);
-        // console.log(res);        
-
-        if(res != null) {
-            valid_alert("Используйте только кириллицу!")
-            that.value = that.value.replace(res, '');
-        }
-    }, 0);
 })
 
+$("#name, #surname").on('input', function() {
+    const res = /[^а-яА-Я]/g.exec(this.value);
+    if(res != null) {
+        valid_alert("Используйте только кириллицу!")
+        this.value = this.value.replace(res, '');
+    }
+});
 
-function valid_alert(text) {
+$('learnCourseBtn').click(() => {
+    $('#keyToModalBtn').trigger('click')
+});
+
+function handleFormSubmit(event) {
+    // Просим форму не отправлять данные самостоятельно
+    event.preventDefault()
+    valid_alert('Отправка!')
+}
+  
+$("#knowMore").on('submit', handleFormSubmit)
+
+
+// Modal 
+function valid_alert(text, title = '') {
+    $('#validWarningModal .modal-header').text(title)
     $('#validWarningModal .modal-body').text(text)
-    $('#keyToDialogBtn').trigger('click')
+    $('#keyToModalBtn').trigger('click')
 }
