@@ -23,16 +23,23 @@ $("#learnCourseBtn").css("height", function() {
 
 console.log($("#name, #surname"))
 
-$("#name, #surname").on('keypress', function() {
-    var that = this;
+
+$("#name, #surname").on('input', function() {
+    const that = this;
 
     setTimeout(function() {
-        var res = /[^а-яА-Я]/g.exec(that.value);
-        console.log(res);
+        const res = /[^а-яА-Я]/g.exec(that.value);
+        // console.log(res);        
 
         if(res != null) {
-            alert("Используйте только кириллицу!")
+            valid_alert("Используйте только кириллицу!")
             that.value = that.value.replace(res, '');
         }
     }, 0);
 })
+
+
+function valid_alert(text) {
+    $('#validWarningModal .modal-body').text(text)
+    $('#keyToDialogBtn').trigger('click')
+}

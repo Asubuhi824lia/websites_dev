@@ -105,9 +105,22 @@
                 </div>
                 
                 <div class="form-btn col-auto d-flex justify-content-center mt-3 mb-3">
-                    <input  type="submit" id="learnCourseBtn" class="btn btn-primary rounded-4" value="Узнать">
+                    <input type="submit" id="learnCourseBtn" class="btn btn-primary rounded-4 mybutton" value="Узнать">
                 </div>
         </form>
+        <!-- Modal -->
+        <button type="button" class="d-none" id="keyToDialogBtn" data-bs-toggle="modal" data-bs-target="#validWarningModal">Hidden btn</button>
+        <div class="modal fade" id="validWarningModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header"></div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary mybutton rounded-4 px-4" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
     <footer class="d-flex justify-content-center">
@@ -128,7 +141,7 @@
     </footer>
 
     <div class="under-footer w-100 py-2 text-center fw-semibold" style="color: #44298C;">Copyright © 2023</div>
-
+   
     
     <script src="courses.js"></script>
     <script src="postCoursesInfo.js"></script>

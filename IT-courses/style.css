@@ -77,7 +77,7 @@ input#name, input#surname, select#selectCourse {
     padding: 10px 20px;
 }
 
-#learnCourseBtn {
+.mybutton {
     background: linear-gradient(135deg, #9F288C, #414EB3);
 }
 
