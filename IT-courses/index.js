@@ -16,8 +16,7 @@ function changeActive(e) {
     } else {
         e.target.parentNode.classList.add("menu-item-active")
     }
-} 
-
+};
 
 // Form
 $("#learnCourseBtn").css("height", function() {
@@ -36,10 +35,55 @@ $('learnCourseBtn').click(() => {
     $('#keyToModalBtn').trigger('click')
 });
 
+// Преобразуем в формат данных форм
+function serializeForm(formNode) {
+    const { elements } = formNode
+
+    const data = Array.from(elements)
+                        .filter((item) => !!item.name)
+                        .map((element) => {
+                            const { name, value } = element
+                            return { name, value }
+                        })
+
+    return data
+}
+
+
+function dataProcessing(form_data) {
+
+    let data = new Map()
+
+    form_data.forEach(element => {
+        data.set(element.name, element.value)
+    });
+
+    let ind;
+    coursesInfo.forEach(element => {
+        if(element.platform == data.get("course"))
+            ind = element
+    });
+
+    const answer = `<p>
+                        `   + data.get("surname") + ' ' + data.get("name") 
+                            + '! Поскольку Вас заинтересовал курс "<span class="text-danger-emphasis">' + ind.title + '</span>'
+                            + '" от "<span class="text-success-emphasis">' + data.get("course") + '</span>'
+                            + '", предлагаем Вам перейти по следующей ссылке, чтобы узнать больше:'
+                            + '\n<a href="'+ind.link+'">' + ind.link + '</a>' +
+                        `
+                    </p>`
+    
+    valid_alert(answer)
+    // const answer = data
+}
+
 function handleFormSubmit(event) {
     // Просим форму не отправлять данные самостоятельно
     event.preventDefault()
-    valid_alert('Отправка!')
+    // valid_alert('Отправка!')
+    const data = serializeForm( $("#knowMore")[0] )
+    dataProcessing(data)
+
 }
   
 $("#knowMore").on('submit', handleFormSubmit)
@@ -48,6 +92,6 @@ $("#knowMore").on('submit', handleFormSubmit)
 // Modal 
 function valid_alert(text, title = '') {
     $('#validWarningModal .modal-header').text(title)
-    $('#validWarningModal .modal-body').text(text)
+    $('#validWarningModal .modal-body').html(text)
     $('#keyToModalBtn').trigger('click')
 }

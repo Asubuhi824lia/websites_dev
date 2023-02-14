@@ -364,7 +364,13 @@ const json = {
     }
 }
 
+// Convert to more convinient format
+let info = json.courses
+let courses = Array()
 
-window.coursesInfo = {
-    courses: json.courses
-};
+for(let course in info) {
+    courses[courses.length] = info[course]
+}
+
+
+window.coursesInfo = courses;
