@@ -65,12 +65,11 @@ function dataProcessing(form_data) {
     });
 
     const answer = `<p>
-                        `   + data.get("surname") + ' ' + data.get("name") 
-                            + '! Поскольку Вас заинтересовал курс "<span class="text-danger-emphasis">' + ind.title + '</span>'
-                            + '" от "<span class="text-success-emphasis">' + data.get("course") + '</span>'
-                            + '", предлагаем Вам перейти по следующей ссылке, чтобы узнать больше:'
-                            + '\n<a href="'+ind.link+'">' + ind.link + '</a>' +
-                        `
+                        ${data.get("surname")} ${data.get("name")}! 
+                        Поскольку Вас заинтересовал курс "<span class="text-danger-emphasis">${ind.title}</span>"
+                        от "<span class="text-success-emphasis">${data.get("course")}</span>", 
+                        предлагаем Вам перейти по следующей ссылке, чтобы узнать больше:\n
+                        <a href="${ind.link}">${ind.link}</a>
                     </p>`
     
     valid_alert(answer)
