@@ -1,32 +1,7 @@
 $(document).ready(function() {
 
     // Заполнить tabs
-    let chose_menu_item
-    console.log(  )
-    coursesInfo.forEach(element => {
-        
-        // get array of tabs
-        let tabs = Array()
-        for(let tablist in element.tabs) {
-            tabs[tabs.length] = element.tabs[tablist]
-        }
-        console.log(tabs)
-
-        // post tabs title
-        let isfirst = true
-        tabs.forEach(element => {
-            console.log(element)
-
-            let caption = elementForHtml(`
-                <li class="${isfirst?'active':''}">${element.title}</li>
-            `)
-            isfirst = false
-
-            $("#courseInfoTabs .tabs__caption").append(caption)
-        });
-
-        // post tabs content
-    });
+    fillTablist()
     
     // Заполнить select вариантами курсов
     coursesInfo.forEach(element => {
@@ -68,12 +43,51 @@ function elementForHtml(html)
 };
 
 
-$("#mainNav").click(changeTablist)
+$("#mainNav").click(fillTablist)
 
 const findChosenPlatform = function() {
-    return $(".menu-item-active")[0].innerText.toLowerCase().trim().split('\n').join('')
+    // get platform name without <br> effect
+    return $(".menu-item-active")[0].innerText.trim().split('\n').join('') 
 }
 
-function changeTablist(e) {
-    console.log(findChosenPlatform())
+function fillTablist() {
+    const platform = findChosenPlatform()
+    console.log(platform)
+
+    showTablist(platform)
+}
+
+function showTablist(platform) {
+
+    // find course
+    let tabs = Array()
+    coursesInfo.forEach(element => {
+        if(element.platform.split(' ').join('').toLowerCase() == platform.toLowerCase()) {
+
+            for(let tablist in element.tabs) {
+                tabs[tabs.length] = element.tabs[tablist]
+            }
+
+            console.log(tabs)
+        }
+    });
+
+    // clean html
+    $("#courseInfoTabs").html("")
+
+    // create new header
+    $("#courseInfoTabs").append( elementForHtml('<ul class="tabs__caption"></ul>') )
+
+    // post tabs title
+    let isfirst = true
+    tabs.forEach(element => {
+        console.log(element)
+
+        let caption = elementForHtml(`
+            <li class="${isfirst?'active':''}">${element.title}</li>
+        `)
+        isfirst = false
+
+        $("#courseInfoTabs .tabs__caption").append(caption)
+    });
 }
