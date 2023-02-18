@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    // Заполнить tabs
     fillTablist()
     
     // Заполнить select вариантами курсов
@@ -52,7 +51,7 @@ const findChosenPlatform = function() {
 
 function fillTablist() {
     const platform = findChosenPlatform()
-    console.log(platform)
+    // console.log(platform)
 
     showTablist(platform)
 }
@@ -62,32 +61,42 @@ function showTablist(platform) {
     // find course
     let tabs = Array()
     coursesInfo.forEach(element => {
-        if(element.platform.split(' ').join('').toLowerCase() == platform.toLowerCase()) {
-
+        if(element.platform.split(' ').join('').toLowerCase() == platform.toLowerCase()) 
+        {
             for(let tablist in element.tabs) {
                 tabs[tabs.length] = element.tabs[tablist]
-            }
-
-            console.log(tabs)
+            };
         }
     });
 
     // clean html
-    $("#courseInfoTabs").html("")
-
-    // create new header
-    $("#courseInfoTabs").append( elementForHtml('<ul class="tabs__caption"></ul>') )
+    $(".tabs__caption").html("")
+    $(".tabs__content").html("")    
 
     // post tabs title
     let isfirst = true
+    let tab_n = 0
     tabs.forEach(element => {
-        console.log(element)
+        // console.log(element)
 
-        let caption = elementForHtml(`
-            <li class="${isfirst?'active':''}">${element.title}</li>
-        `)
+        putCaption(element.title, isfirst)
+        putDescription(element.description, tab_n++)
+
         isfirst = false
-
-        $("#courseInfoTabs .tabs__caption").append(caption)
     });
+}
+
+function putCaption(title, isfirst) {
+    let caption = elementForHtml(`
+            <li class="${isfirst?'active':''}"><p>${title}</p></li>
+        `)
+    $("#courseInfoTabs .tabs__caption").append(caption) 
+}
+
+function putDescription(description, num) {
+    let content = elementForHtml(`
+            <p>${description}</p>
+        `)
+    $(`#courseInfoTabs .tabs__content`)[num].append(content)
+    console.log( $(`#courseInfoTabs .tabs__content`)[num] )
 }

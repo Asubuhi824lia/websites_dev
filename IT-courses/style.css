@@ -3,7 +3,7 @@
 }
 
 a:hover {
-    text-decoration: underline !important;
+    text-decoration: none !important;
 }
 
 body {
@@ -16,7 +16,8 @@ option[selected] {
 
 option {
     height: 44px;
-    color: #44298C;margin: 20px;
+    color: #44298C;
+    margin: 20px;
 }
 
 footer {
@@ -24,7 +25,7 @@ footer {
 }
 
 .menu-item-active {
-    border-bottom: 3px solid #A8248A;
+    border-bottom: 3px solid rgb(73, 0, 156);
     transition: border-width 0s linear;
 }
 
@@ -86,10 +87,22 @@ input#name, input#surname, select#selectCourse {
     .nav-bg {
         background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 1));
     }
+
+    .tabs {
+        justify-content: center;
+    }
 }
 /* while burger-menu */
 @media (max-width: 992px) {
+    header div, .navbar {
+        width: 100%;
+    }
+
     .nav-bg {
         background: linear-gradient(180deg, rgb(238, 130, 238, 0.4), rgba(0, 0, 0, 1));
+    }
+
+    .tabs {
+        justify-content: left;
     }
 }

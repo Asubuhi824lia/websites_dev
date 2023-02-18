@@ -18,6 +18,7 @@ function changeActive(e) {
     }
 };
 
+
 // Form
 $("#learnCourseBtn").css("height", function() {
     return $("#name").css("height");
