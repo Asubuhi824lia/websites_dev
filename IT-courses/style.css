@@ -68,6 +68,24 @@ footer {
     font-weight: bold;
 }
 
+.courses-brief {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-piece {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs-piece {
+    width: 100%;
+    background-image: linear-gradient(135deg, #550047, #5b2f87, #0b123f);
+    display: flex;
+    justify-content: center;
+}
+
 #learnCourseBtn {
     width: calc(100% / 3);;
 }
@@ -79,7 +97,11 @@ input#name, input#surname, select#selectCourse {
 }
 
 .mybutton {
-    background: linear-gradient(135deg, #9F288C, #414EB3);
+    background-image: linear-gradient(135deg, #9F288C, #414EB3);
+}
+
+.mybutton:hover {
+    background-image: linear-gradient(135deg, #921f7f, #3545A5);
 }
 
 /* while usual menu */
