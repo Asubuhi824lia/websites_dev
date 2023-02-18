@@ -72,6 +72,7 @@ function showTablist(platform) {
     // clean html
     $(".tabs__caption").html("")
     $(".tabs__content").html("")    
+    $(`#courseInfoTabs .tabs__content`).removeClass("active")
 
     // post tabs title
     let isfirst = true
@@ -84,19 +85,33 @@ function showTablist(platform) {
 
         isfirst = false
     });
+    
+    $(`#courseInfoTabs .tabs__content`)[0].classList.add("active")
 }
 
 function putCaption(title, isfirst) {
     let caption = elementForHtml(`
             <li class="${isfirst?'active':''}"><p>${title}</p></li>
         `)
-    $("#courseInfoTabs .tabs__caption").append(caption) 
+
+    $("#courseInfoTabs .tabs__caption").append(caption); 
 }
 
 function putDescription(description, num) {
-    let content = elementForHtml(`
-            <p>${description}</p>
-        `)
-    $(`#courseInfoTabs .tabs__content`)[num].append(content)
-    console.log( $(`#courseInfoTabs .tabs__content`)[num] )
+    let content
+    if(typeof description == 'string') {
+        if(description.includes("<ul>")) 
+        {
+            content = elementForHtml(description)
+        } 
+        else 
+        {
+            content = elementForHtml(`
+                <p>${description}</p>
+            `)
+        }
+    }
+
+    $(`#courseInfoTabs .tabs__content`)[num].append(content);
+
 }
