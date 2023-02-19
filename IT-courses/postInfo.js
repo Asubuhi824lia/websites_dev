@@ -101,6 +101,31 @@ function putDescription(description, num) {
                 <p>${description}</p>
             `)
         }
+    } 
+        else 
+    {
+        let types = Array()
+        for(let type in description) {
+            types[types.length] = description[type]
+        }
+        // console.log(types)
+
+        let wrapper = elementForHtml(`
+            <div id="forWho" class="container"></div>
+        `)
+        content = elementForHtml(`<div class="row"></div>`)
+
+        types.forEach(element => {
+            content.append( elementForHtml(`
+                    <div class="col-md-12 intro-panel fw-normal my-2">
+                        <h3>${element.title}</h3>
+                        <p>${element.description}</p>
+                    </div>
+                `) )
+        });        
+        wrapper.append(content)
+        content = wrapper
+
     }
 
     $(`#courseInfoTabs .tabs__content`)[num].append(content);
