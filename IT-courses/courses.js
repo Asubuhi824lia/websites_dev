@@ -5,7 +5,7 @@ const json = {
             title: "Профессия Data Analyst",
             link: "https://skillbox.ru/course/profession-data-scientist/",
 
-            favicon: "/img/",
+            favicon: "./slider/images/skillbox.jpg",
             tasks: "до 9 проектов в портфолио",
             price: "9 904 ₽/мес",
             duration: "12 месяцев",
@@ -53,7 +53,7 @@ const json = {
             title: "Инженер-аналитик",
             link: "https://gb.ru/geek_university/developer/analyst",
 
-            favicon: "",
+            favicon: "./slider/images/geekbrains.jpeg",
             tasks: "",
             price: "от 4 828 ₽ в месяц",
             duration: "12 месяцев по 12 часов в неделю",
@@ -111,7 +111,7 @@ const json = {
             title: "Полный курс по анализу данных",
             link: "https://skillfactory.ru/data-analytics",
 
-            favicon: "",
+            favicon: "./slider/images/skillfactory.jpg",
             tasks: "14 проектов с персональной обратной связью",
             price: "в зависимости от тарифа",
             duration: "6 месяцев",
@@ -181,7 +181,7 @@ const json = {
             title: "Аналитик данных",
             link: "https://netology.ru/programs/data-analyst",
 
-            favicon: "",
+            favicon: "./slider/images/netology.png",
             tasks: "5 масштабных проектов в портфолио",
             price: "182 500 ₽",
             duration: "10 месяцев",
@@ -235,7 +235,7 @@ const json = {
             title: "Аналитика? Сделай сам!",
             link: "https://analytikaplus.ru/video-kurs-analitika-sdelaj-sam/",
 
-            favicon: "",
+            favicon: "./slider/images/analiticaplus.jpg",
             tasks: "",
             price: "Зависит от тарифа",
             duration: "1-3 месяца",
@@ -285,7 +285,7 @@ const json = {
             title: "Бизнес-анализ в сфере разработки ПО",
             link: "https://www.it-courses.by/courses/ba-biznes-analiz/",
 
-            favicon: "",
+            favicon: "./slider/images/stormnet.jpg",
             tasks: "",
             price: "Зависит от типа обучения",
             duration: "8 недель",
@@ -344,7 +344,7 @@ const json = {
             title: "Анализ данных на Python",
             link: "https://brainskills.ru/courses/data_scientist/",
 
-            favicon: "",
+            favicon: "./slider/images/brainskills.jpg",
             tasks: "",
             price: "18 400 ₽",
             duration: "6 недель",

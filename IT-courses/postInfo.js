@@ -32,15 +32,6 @@ $(document).ready(function() {
     });
 });
 
-function elementForHtml(html) 
- {
-    const template = document.createElement("template")
-    
-    template.innerHTML = html.trim()
-
-    return template.content.firstElementChild
-};
-
 
 $("#mainNav").click(fillTablist)
 
@@ -115,3 +106,5 @@ function putDescription(description, num) {
     $(`#courseInfoTabs .tabs__content`)[num].append(content);
 
 }
+
+
