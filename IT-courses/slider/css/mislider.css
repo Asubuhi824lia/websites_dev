@@ -69,20 +69,16 @@
 		}
         .mis-nav-list li a {
 			display: block;
-			width: 11px;
-			height: 11px;
+			width: 15px;
+			height: 15px;
 			text-indent: 100%; /* Replace text */
             overflow: hidden;
             white-space: nowrap;
-			border: 1px solid #eee;
-			border-radius: 7px; /* Make items round */
-			opacity: .3;
-            -webkit-box-shadow: inset 0 0 2px #333;
-            box-shadow: inset 0 0 2px 2px #333;
+            border: 2px solid #9F288C;
             margin: 0 3px;
 		}
 			.mis-nav-list li.mis-current a, .mis-nav-list li a:hover {
-				background: #333;
+				background-image: linear-gradient(#9F288C, #414EB3);
 			}
 
     .mis-nav-buttons {
@@ -104,7 +100,7 @@
             text-indent: -9999px; /* Hide for Android */
         }
             .mis-nav-buttons a:hover {
-                color: #ccc;
+                color: #44298C;
             }
             .mis-nav-buttons a.mis-next {
                 left: auto;
@@ -113,12 +109,12 @@
             .mis-nav-buttons a.mis-prev {
                 left: 0;
             }
-            .mis-nav-buttons a.mis-prev:before, .mis-nav-buttons a.mis-next:after {
-                content: "\2039"; /* left single angle quote */
+            a.mis-prev:before, a.mis-next:after {
+                content: "\25c0"; /* left single angle quote */
                 display: block;
-                font-size: 80px;
+                font-size: 50px;
                 text-indent: 0;
             }
             .mis-nav-buttons a.mis-next:after {
-                content: "\203A"; /* right single angle quote */
+                content: "\25b6"; /* right single angle quote */
             }
