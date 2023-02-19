@@ -39,7 +39,6 @@ footer {
 }
 
 .nav-link {
-    color: white !important;
     width: 100%;
 }
 
@@ -48,6 +47,9 @@ footer {
     background: linear-gradient(180deg, rgb(211, 211, 211, 0.3), black);
 }
 
+.navbar-scroll {
+    background: #5b2f87;
+}
 
 .nav-bg {
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 1));;

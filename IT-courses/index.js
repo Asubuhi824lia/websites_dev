@@ -18,6 +18,18 @@ function changeActive(e) {
     }
 };
 
+    /* Fixed Top NavBar */
+$(function() {
+    const mainNav = $("#mainNav");
+    $(window).scroll(function() {
+        if( $(window).scrollTop() <= 100 ) { 
+            mainNav.removeClass('fixed-top navbar-scroll fw-normal')
+        } else {
+            mainNav.addClass('fixed-top navbar-scroll fw-normal')
+        }
+    })
+})
+
 
 // Form
 $("#learnCourseBtn").css("height", function() {

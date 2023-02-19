@@ -5,7 +5,7 @@ $(document).ready(function() {
     coursesInfo.forEach(element => {
         let slide = elementForHtml(`
             <li class="mis-slide">
-                <a href="#courseInfoTabs" class="mis-container">
+                <a href="#" onclick="return false" class="mis-container">
                     <figure id="${id++}">
                         <img src="${element.favicon}" alt="Logo">
                         <figcaption class="fw-bold">${element.platform}</figcaption>
