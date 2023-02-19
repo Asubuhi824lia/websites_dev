@@ -5,7 +5,7 @@ const json = {
             title: "Профессия Data Analyst",
             link: "https://skillbox.ru/course/profession-data-scientist/",
 
-            favicon: "",
+            favicon: "/img/",
             tasks: "до 9 проектов в портфолио",
             price: "9 904 ₽/мес",
             duration: "12 месяцев",
