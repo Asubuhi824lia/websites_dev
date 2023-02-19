@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
 // Post Course Info
+    let id = 0;
     coursesInfo.forEach(element => {
         let slide = elementForHtml(`
             <li class="mis-slide">
-                <a href="#" class="mis-container">
-                    <figure>
+                <a href="#courseInfoTabs" class="mis-container">
+                    <figure id="${id++}">
                         <img src="${element.favicon}" alt="Logo">
                         <figcaption class="fw-bold">${element.platform}</figcaption>
                         <p>${element.title}</p>
@@ -20,7 +21,6 @@ $(document).ready(function() {
 
 // align figure size
     $(".mis-slider li img").css("max-width", function() {
-        console.log( $(".mis-slider li p").css("height") )
         return `calc( ${$("li.mis-slide").css("height")} 
                     - ${$("li.mis-slide").css("padding-top")} 
                     - ${$("li.mis-slide").css("padding-bottom")} 
@@ -29,3 +29,15 @@ $(document).ready(function() {
     })
 })
     
+
+$(document).ready(function() {
+    $("#coursesBrief .mis-container").click( switchInfo )
+})
+
+function switchInfo() {
+    const figure = elementForHtml( $(this).html() )
+    const platform = coursesInfo[figure.id].platform.trim().split(' ').join('')
+    console.log(platform)
+
+    showTablist(platform)
+}

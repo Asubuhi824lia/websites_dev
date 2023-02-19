@@ -33,15 +33,10 @@ $(document).ready(function() {
 });
 
 
-$("#mainNav").click(fillTablist)
-
-const findChosenPlatform = function() {
-    // get platform name without <br> effect
-    return $(".menu-item-active")[0].innerText.trim().split('\n').join('') 
-}
+$("#mainNav").click(fillTablist);
 
 function fillTablist() {
-    const platform = findChosenPlatform()
+    const platform = $(".menu-item-active")[0].innerText.trim().split('\n').join('') 
     // console.log(platform)
 
     showTablist(platform)

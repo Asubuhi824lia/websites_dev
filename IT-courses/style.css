@@ -69,7 +69,7 @@ footer {
     font-weight: bold;
 }
 
-.courses-brief {
+#coursesBrief {
     display: flex;
     flex-direction: column;
     justify-content: center;
