@@ -4,7 +4,12 @@ let menu_items = document.getElementsByClassName("nav-item");
 
 for(let item = 0; item < menu_items.length; item++) 
 {
-    menu_items[item].addEventListener('click', e => changeActive(e))
+    menu_items[item].addEventListener('click', e => {changeActive(e); flipSlider(item) })
+}
+
+function flipSlider(item) {
+    let mis_nav_list = document.getElementsByClassName("mis-nav-list")
+    mis_nav_list[0].childNodes[item].click()
 }
 
 function changeActive(e) {
@@ -78,7 +83,8 @@ function dataProcessing(form_data) {
     });
 
     const answer = `<p>
-                        ${data.get("surname")} ${data.get("name")}! 
+                        <span style="color: blue;">${data.get("surname")} ${data.get("name")}</span>! 
+                        <br>
                         Поскольку Вас заинтересовал курс "<span class="text-danger-emphasis">${ind.title}</span>"
                         от "<span class="text-success-emphasis">${data.get("course")}</span>", 
                         предлагаем Вам перейти по следующей ссылке, чтобы узнать больше:\n
